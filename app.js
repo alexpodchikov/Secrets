@@ -34,7 +34,7 @@ app.use(passport.initialize());
 // use passport for dealing with the sessions
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/secretDB", {
+mongoose.connect("mongodb+srv://admin-alex:"+process.env.MONGODB_ATLAS_PASSWORD+"@apclucter.y16vl.mongodb.net/secretDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -236,6 +236,6 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server started on port 3000");
 });

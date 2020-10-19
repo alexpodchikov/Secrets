@@ -1,5 +1,5 @@
 # Secrets
-> Server side - Node.js.
+> Server side - Node.js (Express).
 
 > Pssport.js to add Cockies and Session.
 
